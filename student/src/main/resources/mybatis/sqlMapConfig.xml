@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 全局参数配置，不用乱配 -->
+	<!-- <settings></settings> -->
+	<settings>
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="aggressiveLazyLoading" value="false"/>
+	</settings>
+	<typeAliases>
+		<!-- 单个别名配置 ，使用别名不区分大小写-->
+		<!-- <typeAlias type="cn.wq.domain.User" alias="User"/> -->
+		<!-- 批量别名配置 ,别名为类名，不区分大小写，可以配置多个包.常用-->
+	</typeAliases>
+	
+	<!-- 映射配置，重要 -->
+	<!-- <mappers>
+		 <package name="cn.wq.dao"/>
+	</mappers> -->
+</configuration>
