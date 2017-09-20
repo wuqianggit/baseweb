@@ -17,8 +17,16 @@
   <servlet>
     <servlet-name>springmvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--SpringMVC配置文件的位置，如果不配置，默认为WEB-INF/servletName-servlet.xml-->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:config/springmvc-servlet.xml</param-value>
+    </init-param>
+    <!-- 可选的配置，如果存在，则 这个Servlet将在应用程序启动时装在Servlet，并调用init方法
+         若不存在，则 在该 Servlet第一次请求时加载
+         随容器启动-->
+    <load-on-startup>1</load-on-startup>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>springmvc</servlet-name>
     <url-pattern>/</url-pattern>
