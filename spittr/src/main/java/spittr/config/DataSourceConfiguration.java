@@ -38,10 +38,10 @@ public class DataSourceConfiguration {
         return ds;
     }
 
-/*    *//**
+    /**
      * hibernate JPA实现
      * @return
-     *//*
+     */
     @Bean public JpaVendorAdapter jpaVendorAdapter() {
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
         adapter.setDatabase(Database.MYSQL);
@@ -50,12 +50,12 @@ public class DataSourceConfiguration {
         return adapter;
     }
 
-    *//**
+    /**
      * 配置 容器管理类型的JPA
      * @param dataSource 数据源
      * @param jpaVendorAdapter 使用哪个厂商的JPA实现
      * @return
-     *//*
+     */
     @Bean public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(DataSource dataSource,
             JpaVendorAdapter jpaVendorAdapter) {
         LocalContainerEntityManagerFactoryBean emfb = new LocalContainerEntityManagerFactoryBean();
@@ -65,12 +65,4 @@ public class DataSourceConfiguration {
         return emfb;
     }
 
-    *//**
-     * 显示配置Spring理解@PersistenceUnit注解
-     * @return
-     *//*
-    @Bean
-    public PersistenceAnnotationBeanPostProcessor paPostProcessor(){
-        return new PersistenceAnnotationBeanPostProcessor();
-    }*/
 }
